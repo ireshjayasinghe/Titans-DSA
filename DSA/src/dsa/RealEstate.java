@@ -12,6 +12,8 @@ package dsa;
  */
 public class RealEstate extends javax.swing.JFrame {
 
+        private SortedList propertyList = new SortedList();
+  //  ListHouse house;
     /**
      * Creates new form RealEstate
      */
@@ -90,6 +92,11 @@ public class RealEstate extends javax.swing.JFrame {
         });
 
         jButton2_add.setText("Add");
+        jButton2_add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2_addActionPerformed(evt);
+            }
+        });
 
         jButton3_clear.setText("Clear");
         jButton3_clear.addActionListener(new java.awt.event.ActionListener() {
@@ -236,6 +243,11 @@ public class RealEstate extends javax.swing.JFrame {
     
 
     }//GEN-LAST:event_jButton3_clearActionPerformed
+
+    private void jButton2_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2_addActionPerformed
+       
+        
+    }//GEN-LAST:event_jButton2_addActionPerformed
 
 
     /**

@@ -6,16 +6,15 @@
 
 package dsa;
 
-
-
 /**
  *
- * @author Iresh
+ * @author Damitha
  */
-public class SortedList  {
+public interface Listable {
     
+     public abstract Listable copy(); 
+        public abstract int compareTo(Listable other);
     
-    
-    
-    
+       
+        
 }

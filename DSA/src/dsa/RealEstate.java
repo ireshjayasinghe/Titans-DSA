@@ -227,10 +227,10 @@ public class RealEstate extends javax.swing.JFrame {
     private void jButton3_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3_clearActionPerformed
 
      
-        ClearForm();
+        clearForm();
         
     }                                              
-    private void ClearForm()
+    private void clearForm()
     {
     
       jTextField1_Fname.setText("");

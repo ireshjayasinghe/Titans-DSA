@@ -218,6 +218,7 @@ public class RealEstate extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1_resetActionPerformed
 
     private void jButton3_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3_clearActionPerformed
+<<<<<<< HEAD
      
         
         
@@ -228,6 +229,19 @@ public class RealEstate extends javax.swing.JFrame {
     
     
     }
+=======
+        // TODO add your handling code here:
+       jTextField1.setText("");
+       jTextField1_lotnumber.setText("");
+       jTextField2_Lname.setText("");
+      jTextField2_Lname.setText("");
+      jTextField2_NB.setText("");
+      jTextField2_Price.setText("");
+      jTextField2_SF.setText("");
+       
+    }//GEN-LAST:event_jButton3_clearActionPerformed
+
+>>>>>>> origin/master
     /**
      * @param args the command line arguments
      */

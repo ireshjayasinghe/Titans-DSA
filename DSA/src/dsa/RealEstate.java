@@ -92,6 +92,11 @@ public class RealEstate extends javax.swing.JFrame {
         jButton2_add.setText("Add");
 
         jButton3_clear.setText("Clear");
+        jButton3_clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3_clearActionPerformed(evt);
+            }
+        });
 
         jButton4_next.setText("Next");
 
@@ -212,6 +217,17 @@ public class RealEstate extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1_resetActionPerformed
 
+    private void jButton3_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3_clearActionPerformed
+     
+        
+        
+    }//GEN-LAST:event_jButton3_clearActionPerformed
+
+    private void ClearForm()
+    {
+    
+    
+    }
     /**
      * @param args the command line arguments
      */

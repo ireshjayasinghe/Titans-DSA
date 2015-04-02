@@ -33,7 +33,7 @@ public class RealEstate extends javax.swing.JFrame {
         jLabel2_lotNumber = new javax.swing.JLabel();
         jTextField1_lotnumber = new javax.swing.JTextField();
         jLabel2_Fname = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextField1_Fname = new javax.swing.JTextField();
         jLabel2_Lname = new javax.swing.JLabel();
         jTextField2_Lname = new javax.swing.JTextField();
         jLabel2_price = new javax.swing.JLabel();
@@ -59,7 +59,7 @@ public class RealEstate extends javax.swing.JFrame {
 
         jLabel2_Fname.setText("First Name");
 
-        jTextField1.setText(" ");
+        jTextField1_Fname.setText(" ");
 
         jLabel2_Lname.setText("Last Name");
 
@@ -133,7 +133,7 @@ public class RealEstate extends javax.swing.JFrame {
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jTextField2_NB, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jTextField2_SF, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jTextField1_Fname, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jTextField1_lotnumber, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jTextField2_Lname, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jTextField2_Price, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -157,7 +157,7 @@ public class RealEstate extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2_Fname, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField1_Fname, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField2_Lname, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -231,7 +231,7 @@ public class RealEstate extends javax.swing.JFrame {
     }
 =======
         // TODO add your handling code here:
-       jTextField1.setText("");
+       jTextField1_Fname.setText("");
        jTextField1_lotnumber.setText("");
        jTextField2_Lname.setText("");
       jTextField2_Lname.setText("");
@@ -292,7 +292,7 @@ public class RealEstate extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2_lotNumber;
     private javax.swing.JLabel jLabel2_price;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField1_Fname;
     private javax.swing.JTextField jTextField1_lotnumber;
     private javax.swing.JTextField jTextField2_Lname;
     private javax.swing.JTextField jTextField2_NB;

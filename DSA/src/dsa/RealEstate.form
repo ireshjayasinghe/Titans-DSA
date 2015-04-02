@@ -73,7 +73,7 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jTextField2_NB" min="-2" pref="163" max="-2" attributes="0"/>
                                               <Component id="jTextField2_SF" min="-2" pref="163" max="-2" attributes="0"/>
-                                              <Component id="jTextField1" min="-2" pref="163" max="-2" attributes="0"/>
+                                              <Component id="jTextField1_Fname" min="-2" pref="163" max="-2" attributes="0"/>
                                               <Component id="jTextField1_lotnumber" min="-2" pref="163" max="-2" attributes="0"/>
                                               <Component id="jTextField2_Lname" min="-2" pref="163" max="-2" attributes="0"/>
                                               <Component id="jTextField2_Price" min="-2" pref="163" max="-2" attributes="0"/>
@@ -109,7 +109,7 @@
                   <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2_Fname" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="jTextField1" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="jTextField1_Fname" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -172,7 +172,7 @@
             <Property name="text" type="java.lang.String" value="First Name"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextField1">
+        <Component class="javax.swing.JTextField" name="jTextField1_Fname">
           <Properties>
             <Property name="text" type="java.lang.String" value=" "/>
           </Properties>

@@ -12,11 +12,11 @@ package dsa;
  */
 public class ListHouse  {
     public int LOTNUMBER;
-    private String FIRSTNAME;
-    private String LASTNAME;
-    private int PRICE;
-    private int SQUAREFEET;
-    private int NUMBEROFBEDROOMS;
+    public String FIRSTNAME;
+    public String LASTNAME;
+    public int PRICE;
+    public int SQUAREFEET;
+    public int NUMBEROFBEDROOMS;
     
     
         public ListHouse(){

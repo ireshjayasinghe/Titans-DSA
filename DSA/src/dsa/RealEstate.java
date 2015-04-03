@@ -256,8 +256,10 @@ public class RealEstate extends javax.swing.JFrame {
 
     private void jButton2_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2_addActionPerformed
   
+
         
-        HouseList.insert(HOUSE);       
+        HouseList.insert(HOUSE); 
+        clearForm();
         
     }//GEN-LAST:event_jButton2_addActionPerformed
 
@@ -275,6 +277,11 @@ public class RealEstate extends javax.swing.JFrame {
              int  lotNumber = Integer.parseInt(jTextField1_lotnumber.getText());
           HOUSE = new ListHouse(lotNumber,"", "",  0, 0, 0);
            HOUSE = (ListHouse) HouseList.Find(HOUSE);
+           
+
+      
+
+           
     }//GEN-LAST:event_jButton6_findActionPerformed
 
 

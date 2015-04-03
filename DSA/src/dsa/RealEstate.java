@@ -115,6 +115,11 @@ public class RealEstate extends javax.swing.JFrame {
         });
 
         jButton6_find.setText("Find");
+        jButton6_find.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6_findActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -262,6 +267,15 @@ public class RealEstate extends javax.swing.JFrame {
         HouseList.delete(HOUSE);
         
     }//GEN-LAST:event_jButton5_deleteActionPerformed
+
+    private void jButton6_findActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6_findActionPerformed
+
+        // TODO add your handling code here:
+        
+             int  lotNumber = Integer.parseInt(jTextField1_lotnumber.getText());
+          HOUSE = new ListHouse(lotNumber,"", "",  0, 0, 0);
+           HOUSE = (ListHouse) HouseList.retrieve(HOUSE);
+    }//GEN-LAST:event_jButton6_findActionPerformed
 
 
     /**

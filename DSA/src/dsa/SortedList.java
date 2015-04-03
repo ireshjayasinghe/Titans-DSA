@@ -50,6 +50,7 @@ public class SortedList implements Listable{
         
     public ListHouse Find(ListHouse House) {
        
+        boolean foundHouse = false;
              return House;
          } 
 

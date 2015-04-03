@@ -53,9 +53,7 @@ public class SortedList implements Listable{
         boolean foundHouse = false;
         int counter =0; 
          while (!foundHouse) {
-             return House;
-         } 
-          CurrentLotNumber = Houselist[counter].LOTNUMBER;
+              CurrentLotNumber = Houselist[counter].LOTNUMBER;
             if(0==compareTo(House))
             {
                 //     copy();
@@ -64,10 +62,14 @@ public class SortedList implements Listable{
              
               } 
              counter ++;
-                     
+         }      
          
-         }
-            }
+         
+            
+             return House;
+         
+          
+    }
 
     @Override
     public Listable copy() {

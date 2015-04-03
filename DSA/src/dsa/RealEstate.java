@@ -287,7 +287,9 @@ public class RealEstate extends javax.swing.JFrame {
 jTextField1_Fname.setText(HOUSE.FIRSTNAME);
       jTextField1_lotnumber.setText(Integer.toString(HOUSE.LOTNUMBER));
       jTextField2_Lname.setText(HOUSE.LASTNAME);
-      
+      jTextField2_NB.setText(Integer.toString(HOUSE.NUMBEROFBEDROOMS));
+      jTextField2_Price.setText(Integer.toString(HOUSE.PRICE));
+      jTextField2_SF.setText(Integer.toString(HOUSE.SQUAREFEET));      
 
            
     }//GEN-LAST:event_jButton6_findActionPerformed

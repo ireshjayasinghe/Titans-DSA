@@ -55,10 +55,25 @@ public class SortedList {
     
     }
     
-        public void delete(Listable item) 
-    {
-       
-    }
+   public void remove(int lotnumber)
+        {
+           
+                for (int i = 0; i < Houselist.length; i++) {
+                    if (Houselist[i]!=null) {
+                        if (Houselist[i].LOTNUMBER==lotnumber) {
+
+                            Houselist[i]=null;
+                            return;
+                            
+                        }
+                        
+                        
+                    }
+                    
+                    
+                }
+            
+        }
         
     
         public  ListHouse  findHouse(int lotNumber)

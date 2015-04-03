@@ -294,6 +294,7 @@ public class RealEstate extends javax.swing.JFrame {
       
         // TODO add your handling code here:
         
+<<<<<<< HEAD
       int  lotNumber = Integer.parseInt(jTextField1_lotnumber.getText().trim());
          // HOUSE = new ListHouse(lotNumber,"", "",  0, 0, 0);
            HOUSE = HouseList.findHouse(lotNumber);
@@ -309,6 +310,18 @@ public class RealEstate extends javax.swing.JFrame {
       jTextField2_NB.setText(Integer.toString(HOUSE.NUMBEROFBEDROOMS));
       jTextField2_Price.setText(Integer.toString(HOUSE.PRICE));
       jTextField2_SF.setText(Integer.toString(HOUSE.SQUAREFEET));      
+=======
+////             int  lotNumber = Integer.parseInt(jTextField1_lotnumber.getText());
+////       
+////           HOUSE = (ListHouse) HouseList.findHouse(HOUSE);
+////           
+////jTextField1_Fname.setText(HOUSE.FIRSTNAME);
+////      jTextField1_lotnumber.setText(Integer.toString(HOUSE.LOTNUMBER));
+////      jTextField2_Lname.setText(HOUSE.LASTNAME);
+////      jTextField2_NB.setText(Integer.toString(HOUSE.NUMBEROFBEDROOMS));
+////      jTextField2_Price.setText(Integer.toString(HOUSE.PRICE));
+      //jTextField2_SF.setText(Integer.toString(HOUSE.SQUAREFEET));      
+>>>>>>> origin/master
 
            
     }//GEN-LAST:event_jButton6_findActionPerformed
@@ -378,6 +391,13 @@ public class RealEstate extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2_SF;
     // End of variables declaration//GEN-END:variables
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/master
  void DispalyHouse(int index){
         
           ListHouse[] listHouse = HouseList.bubbleSort();
@@ -429,4 +449,18 @@ public class RealEstate extends javax.swing.JFrame {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/master
 }
+

@@ -13,18 +13,29 @@ import java.util.List;
  *
  * @author iresh
  */
+<<<<<<< HEAD
 public class SortedList {
     
+=======
+public class SortedList {  
+>>>>>>> origin/master
      ListHouse []Houselist;
      int compareResult;
      int CurrentLotNumber;
      HouseFile HouseFileObject;
 //       ListHouse[] CurrentLists = new ListHouse[10];
 
+<<<<<<< HEAD
     public SortedList() {
        Houselist =new ListHouse[2];
       try{
        HouseFileObject = new HouseFile();
+=======
+       public SortedList() {
+       Houselist =new ListHouse[2];
+      try{
+       HouseFile Object = new HouseFile();
+>>>>>>> origin/master
         ListHouse[] newObject = HouseFileObject.ReadFromFile();
        
           if (newObject!=null) {
@@ -77,6 +88,7 @@ public class SortedList {
     
     }
     
+<<<<<<< HEAD
  
         
      public  ListHouse  findHouse(int lotNumber)
@@ -120,6 +132,50 @@ public class SortedList {
      
      
     public ListHouse[] bubbleSort(){
+=======
+   public void remove(int lotnumber)
+        {
+           
+                for (int i = 0; i < Houselist.length; i++) {
+                    if (Houselist[i]!=null) {
+                        if (Houselist[i].LOTNUMBER==lotnumber) {
+
+                            Houselist[i]=null;
+                            return;
+                            
+                        }
+                        
+                        
+                    }
+                    
+                    
+                }
+            
+        }
+        
+    
+        public  ListHouse  findHouse(int lotNumber)
+        {
+        for (int i = 0; i <Houselist.length; i++) {
+            if (Houselist[i]!=null) {
+                
+            
+            if (Houselist[i].LOTNUMBER== lotNumber) {
+                
+                return Houselist[i];
+                
+                
+            }
+            }
+        }
+             return null;
+        }
+
+     
+
+    
+       public ListHouse[] bubbleSort(){
+>>>>>>> origin/master
       
      
            ListHouse []templist=new ListHouse[Houselist.length];
@@ -169,11 +225,18 @@ public class SortedList {
              
 		
 	}
+<<<<<<< HEAD
 	
 	
 	
         
     
     
+=======
+    
+    
+    
+   
+>>>>>>> origin/master
     
 }

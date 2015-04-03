@@ -352,4 +352,71 @@ jTextField1_Fname.setText(HOUSE.FIRSTNAME);
     private javax.swing.JTextField jTextField2_Price;
     private javax.swing.JTextField jTextField2_SF;
     // End of variables declaration//GEN-END:variables
+
+
+
+
+
+ void DispalyHouse(int index){
+        
+          ListHouse[] listHouse = HouseList.bubbleSort();
+        if (listHouse.length<=index ) {
+           
+             return;
+        }
+        
+            int LOTNUMBER=0;
+          String FIRSTNAME=null;
+          String LASTNAME=null;
+          int NO_OFROOMS=0;
+          double PRICE=0;
+          int SF=0;
+        
+        
+          for (int i = 0; i <= index ; i++) {
+            
+                if (listHouse[i]==null) {
+                    return;
+                  
+              }
+                if (listHouse[i]!=null) {
+                    
+                LOTNUMBER=listHouse[i].LOTNUMBER;
+                FIRSTNAME=listHouse[i].FIRSTNAME;
+                LASTNAME=listHouse[i].LASTNAME;
+                NO_OFROOMS=listHouse[i].NUMBEROFBEDROOMS;
+                PRICE=listHouse[i].PRICE;
+                SF=listHouse[i].SQUAREFEET;
+                }
+              
+                
+                
+           }
+    
+                jTextField1_lotnumber.setText(""+LOTNUMBER);
+                jTextField1_Fname.setText(FIRSTNAME);
+                jTextField2_Lname.setText(LASTNAME);
+                jTextField2_NB.setText(""+NO_OFROOMS);
+                jTextField2_Price.setText(""+PRICE);
+                jTextField2_SF.setText(""+SF);
+    
+    
+    
+        
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+

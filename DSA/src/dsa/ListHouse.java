@@ -10,8 +10,8 @@ package dsa;
  *
  * @author Damitha
  */
-public class ListHouse {
-    private int LOTNUMBER;
+public class ListHouse implements Listable {
+    public int LOTNUMBER;
     private String FIRSTNAME;
     private String LASTNAME;
     private int PRICE;

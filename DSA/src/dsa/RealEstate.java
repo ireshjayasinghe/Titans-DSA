@@ -12,8 +12,8 @@ package dsa;
  */
 public class RealEstate extends javax.swing.JFrame {
 
-        private SortedList propertyList = new SortedList();
-  //  ListHouse house;
+    private SortedList HouseList = new SortedList();
+    ListHouse HOUSE;
     /**
      * Creates new form RealEstate
      */
@@ -108,6 +108,11 @@ public class RealEstate extends javax.swing.JFrame {
         jButton4_next.setText("Next");
 
         jButton5_delete.setText("Delete");
+        jButton5_delete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5_deleteActionPerformed(evt);
+            }
+        });
 
         jButton6_find.setText("Find");
 
@@ -245,9 +250,18 @@ public class RealEstate extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3_clearActionPerformed
 
     private void jButton2_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2_addActionPerformed
-       
+  
+        
+        HouseList.insert(HOUSE);       
         
     }//GEN-LAST:event_jButton2_addActionPerformed
+
+    private void jButton5_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5_deleteActionPerformed
+     
+        
+        HouseList.delete(HOUSE);
+        
+    }//GEN-LAST:event_jButton5_deleteActionPerformed
 
 
     /**

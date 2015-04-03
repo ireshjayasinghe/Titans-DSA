@@ -46,7 +46,7 @@ public class SortedList {
        
     }
         
-           public Listable retrieve(ListHouse House) {
+    public ListHouse retrieve(ListHouse House) {
              
              return House;
          } 

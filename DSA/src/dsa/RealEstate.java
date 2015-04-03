@@ -264,7 +264,7 @@ public class RealEstate extends javax.swing.JFrame {
     private void jButton5_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5_deleteActionPerformed
      
         
-        HouseList.delete(HOUSE);
+      //  HouseList.delete(HOUSE);
         
     }//GEN-LAST:event_jButton5_deleteActionPerformed
 

@@ -22,6 +22,7 @@ public class RealEstate extends javax.swing.JFrame {
     public RealEstate() {
         initComponents();
          HouseFileObject = new HouseFile();
+         setLocationRelativeTo(null);
       
     }
 
@@ -272,7 +273,7 @@ public class RealEstate extends javax.swing.JFrame {
         HOUSE.LASTNAME = jTextField2_Lname.getText().trim();
         HOUSE.LOTNUMBER = Integer.parseInt(jTextField1_lotnumber.getText().trim());
         HOUSE.NUMBEROFBEDROOMS = Integer.parseInt(jTextField2_NB.getText().trim());
-        HOUSE.PRICE= Integer.parseInt(jTextField2_Price.getText().trim());
+        HOUSE.PRICE= (int)Integer.parseInt(jTextField2_Price.getText().trim());
         HOUSE.SQUAREFEET = Integer.parseInt(jTextField2_SF.getText().trim());
         
         HouseList.insert(HOUSE); 
@@ -283,10 +284,17 @@ public class RealEstate extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2_addActionPerformed
 
     private void jButton5_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5_deleteActionPerformed
-     
+        try {
+            
           int  lotNumber = Integer.parseInt(jTextField1_lotnumber.getText());
          HouseList.remove(lotNumber);
+     
+        } catch (NumberFormatException e) {
+        }
+     
       //  HouseList.delete(HOUSE);
+     
+     
         
     }//GEN-LAST:event_jButton5_deleteActionPerformed
 
@@ -390,7 +398,7 @@ public class RealEstate extends javax.swing.JFrame {
           String FIRSTNAME=null;
           String LASTNAME=null;
           int NO_OFROOMS=0;
-          double PRICE=0;
+          int PRICE=0;
           int SF=0;
         
         

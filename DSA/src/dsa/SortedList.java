@@ -51,6 +51,8 @@ public class SortedList implements Listable{
     public ListHouse Find(ListHouse House) {
        
         boolean foundHouse = false;
+        int counter =0; 
+         while (!foundHouse) {
              return House;
          } 
 

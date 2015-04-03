@@ -17,6 +17,8 @@ public class SortedList implements Listable{
     
      ListHouse []Houselist;
      int compareResult;
+     int CurrentLotNumber;
+     
 //       ListHouse[] CurrentLists = new ListHouse[10];
 
     public SortedList() {
@@ -47,29 +49,14 @@ public class SortedList implements Listable{
     }
         
     public ListHouse Find(ListHouse House) {
-               boolean foundHouse = false;
-        int counter =0; 
-         while (!foundHouse) {
-             
-            if(compareTo(House))
-            {
-          
-               
-             
-              } 
-             counter ++;
-                     
-         
-         }
-      
-        
+       
              return House;
          } 
 
     @Override
     public Listable copy() {
         
-        
+      //  Houselist[counter]
         
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -79,8 +66,20 @@ public class SortedList implements Listable{
         
       //  ListHouse thisHouse = (ListHouse) otherHouse;
         
+        if (other.LOTNUMBER > CurrentLotNumber) {
+            
+            return -1;
+        }
+        else if (other.LOTNUMBER == CurrentLotNumber) {
+            
+            return 0;
+        }
+        else
+        {
+            return  1;
+        }
         
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
     
 }

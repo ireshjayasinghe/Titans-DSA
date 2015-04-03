@@ -13,7 +13,7 @@ package dsa;
 public interface Listable {
     
      public abstract Listable copy(); 
-        public abstract int compareTo(Listable other);
+        public abstract int compareTo(ListHouse other);
     
        
         

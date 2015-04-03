@@ -274,7 +274,7 @@ public class RealEstate extends javax.swing.JFrame {
         
              int  lotNumber = Integer.parseInt(jTextField1_lotnumber.getText());
           HOUSE = new ListHouse(lotNumber,"", "",  0, 0, 0);
-           HOUSE = (ListHouse) HouseList.retrieve(HOUSE);
+           HOUSE = (ListHouse) HouseList.Find(HOUSE);
     }//GEN-LAST:event_jButton6_findActionPerformed
 
 

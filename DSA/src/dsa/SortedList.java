@@ -20,9 +20,22 @@ public class SortedList {
      
 //       ListHouse[] CurrentLists = new ListHouse[10];
 
-    public SortedList() {
-       Houselist =new ListHouse[5];
+       public SortedList() {
+       Houselist =new ListHouse[2];
+      try{
+       HouseFile Object = new HouseFile();
+        ListHouse[] newObject = HouseFileObject.ReadFromFile();
        
+          if (newObject!=null) {
+               Houselist=newObject;
+          }
+           
+      
+      }catch(Exception  e)
+      {
+      
+      }
+      
     }
     
     

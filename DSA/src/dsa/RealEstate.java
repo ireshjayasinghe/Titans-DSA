@@ -14,11 +14,15 @@ public class RealEstate extends javax.swing.JFrame {
 
     private SortedList HouseList = new SortedList();
     ListHouse HOUSE;
+    int index=0;
+     HouseFile HouseFileObject;
     /**
      * Creates new form RealEstate
      */
     public RealEstate() {
         initComponents();
+         HouseFileObject = new HouseFile();
+      
     }
 
     /**
@@ -106,6 +110,11 @@ public class RealEstate extends javax.swing.JFrame {
         });
 
         jButton4_next.setText("Next");
+        jButton4_next.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4_nextActionPerformed(evt);
+            }
+        });
 
         jButton5_delete.setText("Delete");
         jButton5_delete.addActionListener(new java.awt.event.ActionListener() {
@@ -232,6 +241,8 @@ public class RealEstate extends javax.swing.JFrame {
 
     private void jButton1_resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1_resetActionPerformed
         // TODO add your handling code here:
+        DispalyHouse(0);
+        index=1;
     }//GEN-LAST:event_jButton1_resetActionPerformed
 
     private void jButton3_clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3_clearActionPerformed
@@ -255,36 +266,44 @@ public class RealEstate extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3_clearActionPerformed
 
     private void jButton2_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2_addActionPerformed
-  
+         HOUSE = new ListHouse();
 
-         HOUSE.FIRSTNAME = jTextField1_Fname.getText();
-        HOUSE.LASTNAME = jTextField2_Lname.getText();
-        HOUSE.LOTNUMBER = Integer.parseInt(jTextField1_lotnumber.getText());
-        HOUSE.NUMBEROFBEDROOMS = Integer.parseInt(jTextField2_NB.getText());
-        HOUSE.PRICE= Integer.parseInt(jTextField2_Price.getText());
-        HOUSE.SQUAREFEET = Integer.parseInt(jTextField2_SF.getText());
+        HOUSE.FIRSTNAME = jTextField1_Fname.getText().trim();
+        HOUSE.LASTNAME = jTextField2_Lname.getText().trim();
+        HOUSE.LOTNUMBER = Integer.parseInt(jTextField1_lotnumber.getText().trim());
+        HOUSE.NUMBEROFBEDROOMS = Integer.parseInt(jTextField2_NB.getText().trim());
+        HOUSE.PRICE= Integer.parseInt(jTextField2_Price.getText().trim());
+        HOUSE.SQUAREFEET = Integer.parseInt(jTextField2_SF.getText().trim());
         
         HouseList.insert(HOUSE); 
         clearForm();
+        
+        HouseFileObject.WriteToFile(HouseList.Houselist);
         
     }//GEN-LAST:event_jButton2_addActionPerformed
 
     private void jButton5_deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5_deleteActionPerformed
      
-        
+          int  lotNumber = Integer.parseInt(jTextField1_lotnumber.getText());
+         HouseList.remove(lotNumber);
       //  HouseList.delete(HOUSE);
         
     }//GEN-LAST:event_jButton5_deleteActionPerformed
 
     private void jButton6_findActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6_findActionPerformed
-
+      
         // TODO add your handling code here:
         
-             int  lotNumber = Integer.parseInt(jTextField1_lotnumber.getText());
-          HOUSE = new ListHouse(lotNumber,"", "",  0, 0, 0);
-           HOUSE = (ListHouse) HouseList.Find(HOUSE);
+      int  lotNumber = Integer.parseInt(jTextField1_lotnumber.getText().trim());
+         // HOUSE = new ListHouse(lotNumber,"", "",  0, 0, 0);
+           HOUSE = HouseList.findHouse(lotNumber);
+           if (HOUSE==null) {
+               
+              return;
+            
+        }
            
-jTextField1_Fname.setText(HOUSE.FIRSTNAME);
+      jTextField1_Fname.setText(HOUSE.FIRSTNAME);
       jTextField1_lotnumber.setText(Integer.toString(HOUSE.LOTNUMBER));
       jTextField2_Lname.setText(HOUSE.LASTNAME);
       jTextField2_NB.setText(Integer.toString(HOUSE.NUMBEROFBEDROOMS));
@@ -293,6 +312,12 @@ jTextField1_Fname.setText(HOUSE.FIRSTNAME);
 
            
     }//GEN-LAST:event_jButton6_findActionPerformed
+
+    private void jButton4_nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4_nextActionPerformed
+        // TODO add your handling code here:
+        DispalyHouse(index);
+        ++index;
+    }//GEN-LAST:event_jButton4_nextActionPerformed
 
 
     /**
@@ -352,4 +377,56 @@ jTextField1_Fname.setText(HOUSE.FIRSTNAME);
     private javax.swing.JTextField jTextField2_Price;
     private javax.swing.JTextField jTextField2_SF;
     // End of variables declaration//GEN-END:variables
+
+ void DispalyHouse(int index){
+        
+          ListHouse[] listHouse = HouseList.bubbleSort();
+        if (listHouse.length<=index ) {
+           
+             return;
+        }
+        
+            int LOTNUMBER=0;
+          String FIRSTNAME=null;
+          String LASTNAME=null;
+          int NO_OFROOMS=0;
+          double PRICE=0;
+          int SF=0;
+        
+        
+          for (int i = 0; i <= index ; i++) {
+            
+                if (listHouse[i]==null) {
+                    return;
+                  
+              }
+                if (listHouse[i]!=null) {
+                    
+                LOTNUMBER=listHouse[i].LOTNUMBER;
+                FIRSTNAME=listHouse[i].FIRSTNAME;
+                LASTNAME=listHouse[i].LASTNAME;
+                NO_OFROOMS=listHouse[i].NUMBEROFBEDROOMS;
+                PRICE=listHouse[i].PRICE;
+                SF=listHouse[i].SQUAREFEET;
+                }
+              
+                
+                
+           }
+    
+                jTextField1_lotnumber.setText(""+LOTNUMBER);
+                jTextField1_Fname.setText(FIRSTNAME);
+                jTextField2_Lname.setText(LASTNAME);
+                jTextField2_NB.setText(""+NO_OFROOMS);
+                jTextField2_Price.setText(""+PRICE);
+                jTextField2_SF.setText(""+SF);
+    
+    
+    
+        
+        
+    }
+
+
+
 }

@@ -10,9 +10,9 @@ package dsa;
  *
  * @author Damitha
  */
-public interface Listable {
-    
-     public abstract Listable copy(); 
+public interface Listable extends Comparable<ListHouse> {
+       
+       ListHouse copy();
         public abstract int compareTo(ListHouse other);
     
        

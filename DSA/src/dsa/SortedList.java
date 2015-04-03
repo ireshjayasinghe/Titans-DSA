@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author envy
  */
-public class SortedList {
+public class SortedList implements Listable{
     
      ListHouse []Houselist;
      int compareResult;
@@ -46,9 +46,28 @@ public class SortedList {
        
     }
         
-    public ListHouse retrieve(ListHouse House) {
+    public ListHouse Find(ListHouse House) {
              
+      
+        
              return House;
          } 
+
+    @Override
+    public Listable copy() {
+        
+        
+        
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int compareTo(ListHouse other) {
+        
+      //  ListHouse thisHouse = (ListHouse) otherHouse;
+        
+        
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

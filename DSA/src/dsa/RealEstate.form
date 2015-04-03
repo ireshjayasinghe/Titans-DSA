@@ -58,35 +58,34 @@
                               <Component id="jButton3_clear" min="-2" pref="120" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jButton1_reset" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                                      <Component id="jButton2_add" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jButton5_delete" min="-2" pref="121" max="-2" attributes="0"/>
+                                      <Component id="jButton4_next" min="-2" pref="121" max="-2" attributes="0"/>
+                                      <Component id="jButton6_find" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel2_lotNumber" alignment="0" min="-2" pref="72" max="-2" attributes="0"/>
                                       <Component id="jLabel2_Fname" alignment="0" min="-2" pref="72" max="-2" attributes="0"/>
                                       <Component id="jLabel2_Lname" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
                                       <Component id="jLabel2_price" alignment="0" min="-2" pref="62" max="-2" attributes="0"/>
                                       <Component id="jLabel2_SF" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
                                       <Component id="jLabel2_NB" alignment="0" min="-2" pref="124" max="-2" attributes="0"/>
-                                      <Component id="jButton1_reset" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
-                                      <Component id="jButton2_add" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
                                   </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTextField2_NB" min="-2" pref="163" max="-2" attributes="0"/>
-                                              <Component id="jTextField2_SF" min="-2" pref="163" max="-2" attributes="0"/>
-                                              <Component id="jTextField1_Fname" min="-2" pref="163" max="-2" attributes="0"/>
-                                              <Component id="jTextField1_lotnumber" min="-2" pref="163" max="-2" attributes="0"/>
-                                              <Component id="jTextField2_Lname" min="-2" pref="163" max="-2" attributes="0"/>
-                                              <Component id="jTextField2_Price" min="-2" pref="163" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jButton5_delete" min="-2" pref="121" max="-2" attributes="0"/>
-                                              <Component id="jButton4_next" min="-2" pref="121" max="-2" attributes="0"/>
-                                              <Component id="jButton6_find" alignment="0" min="-2" pref="121" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
+                                      <Component id="jTextField2_NB" min="-2" pref="163" max="-2" attributes="0"/>
+                                      <Component id="jTextField2_SF" min="-2" pref="163" max="-2" attributes="0"/>
+                                      <Component id="jTextField1_Fname" min="-2" pref="163" max="-2" attributes="0"/>
+                                      <Component id="jTextField1_lotnumber" min="-2" pref="163" max="-2" attributes="0"/>
+                                      <Component id="jTextField2_Lname" min="-2" pref="163" max="-2" attributes="0"/>
+                                      <Component id="jTextField2_Price" min="-2" pref="163" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>

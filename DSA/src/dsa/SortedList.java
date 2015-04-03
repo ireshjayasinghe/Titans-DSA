@@ -13,8 +13,7 @@ import java.util.List;
  *
  * @author envy
  */
-public class SortedList implements Listable{
-    
+public class SortedList {  
      ListHouse []Houselist;
      int compareResult;
      int CurrentLotNumber;
@@ -48,56 +47,80 @@ public class SortedList implements Listable{
        
     }
         
-    public ListHouse Find(ListHouse House) {
-       
-        boolean foundHouse = false;
-        int counter =0; 
-         while (!foundHouse) {
-              CurrentLotNumber = Houselist[counter].LOTNUMBER;
-            if(0==compareTo(House))
-            {
-                //     copy();
-           House =    Houselist[counter];
-               
-             
-              } 
-             counter ++;
-         }      
-         
-         
-            
-             return House;
-         
-          
-    }
-
-    @Override
-    public Listable copy() {
-        
-      //  Houselist[counter]
-        
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public int compareTo(ListHouse other) {
-        
-      //  ListHouse thisHouse = (ListHouse) otherHouse;
-        
-        if (other.LOTNUMBER > CurrentLotNumber) {
-            
-            return -1;
-        }
-        else if (other.LOTNUMBER == CurrentLotNumber) {
-            
-            return 0;
-        }
-        else
+    
+        public  ListHouse  findHouse(int lotNumber)
         {
-            return  1;
+        for (int i = 0; i <Houselist.length; i++) {
+            if (Houselist[i]!=null) {
+                
+            
+            if (Houselist[i].LOTNUMBER== lotNumber) {
+                
+                return Houselist[i];
+                
+                
+            }
+            }
         }
-        
-        
-    }
+             return null;
+        }
+
+     
+
+    
+       public ListHouse[] bubbleSort(){
+      
+     
+           ListHouse []templist=new ListHouse[Houselist.length];
+           
+            for (int i = 0; i < templist.length; i++) {
+                if (Houselist[i]!=null) {
+                     templist[i]=Houselist[i].copy();
+                }
+               
+                
+            }
+           
+         
+		for(int i =templist.length - 1; i > 1; i--){
+
+			
+			for(int j = 0; j < i; j++){
+				
+                                  
+                                
+                            if (templist[j]!=null && templist[j+1] !=null) {
+                                
+                            
+			
+                                         
+                                      if(templist[j].compareTo(templist[j+1])==1){
+					
+			               
+                                          ListHouse temp= templist[j];
+                                          
+                                         templist[j]=templist[j+1];
+                                          templist[j+1]=temp;
+									
+					
+				        }
+                                      
+                                     
+                            }
+                            }
+				
+			
+			
+		}
+                
+                return templist;
+                
+             
+		
+	}
+    
+    
+    
+   
     
 }

@@ -10,7 +10,7 @@ package dsa;
  *
  * @author Damitha
  */
-public class ListHouse  {
+public class ListHouse implements Listable{
     public int LOTNUMBER;
     public String FIRSTNAME;
     public String LASTNAME;
@@ -33,6 +33,33 @@ public class ListHouse  {
         this.PRICE = price;
         this.SQUAREFEET = squareFeet;
         this.NUMBEROFBEDROOMS = bedRooms;
+    }
+
+     @Override
+    public int compareTo(ListHouse other) {
+        
+      //  ListHouse thisHouse = (ListHouse) otherHouse;
+        
+        if (this.LOTNUMBER >other.LOTNUMBER) {
+            
+            return 1;
+        }
+        else if (this.LOTNUMBER ==other.LOTNUMBER) {
+            
+            return 0;
+        }
+        else
+        {
+            return  -1;
+        }
+        
+        
+    }
+
+    @Override
+    public ListHouse copy() {
+       ListHouse list=this;
+       return list;
     }
     
     

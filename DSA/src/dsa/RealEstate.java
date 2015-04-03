@@ -257,6 +257,12 @@ public class RealEstate extends javax.swing.JFrame {
     private void jButton2_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2_addActionPerformed
   
 
+         HOUSE.FIRSTNAME = jTextField1_Fname.getText();
+        HOUSE.LASTNAME = jTextField2_Lname.getText();
+        HOUSE.LOTNUMBER = Integer.parseInt(jTextField1_lotnumber.getText());
+        HOUSE.NUMBEROFBEDROOMS = Integer.parseInt(jTextField2_NB.getText());
+        HOUSE.PRICE= Integer.parseInt(jTextField2_Price.getText());
+        HOUSE.SQUAREFEET = Integer.parseInt(jTextField2_SF.getText());
         
         HouseList.insert(HOUSE); 
         clearForm();
